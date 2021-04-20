@@ -2,6 +2,7 @@ package StreamApi;
 
 import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import lambda.Person;
+import lambda.Status;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -14,11 +15,11 @@ import java.util.stream.StreamSupport;
 
 public class TestStreamAPI2 {
     List<Person> people = Arrays.asList(
-            new Person("张三", 20),
-            new Person("李四", 30),
-            new Person("王五", 40),
-            new Person("赵六", 50),
-            new Person("田七", 60)
+            new Person("张三", 20, Status.FREE),
+            new Person("李四", 30, Status.BUSY),
+            new Person("王五", 40, Status.FREE),
+            new Person("赵六", 50, Status.VOCATION),
+            new Person("田七", 60, Status.BUSY)
     );
     //中间操作
 

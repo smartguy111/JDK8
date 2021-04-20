@@ -64,18 +64,18 @@ public class MethodRef {
         _methodRef.arrayRef(10, x -> new String[x]);
         _methodRef.arrayRef(10, String[]::new);
 
-        // 无参
-        _methodRef.constructorRef(()->new Person());
-        _methodRef.constructorRef(Person::new);
-        // 有参
-        _methodRef.constructorRef2("123",123, (x, y)->new Person(x,y));
-        _methodRef.constructorRef2("123",123, Person::new);
+//        // 无参
+//        _methodRef.constructorRef(()->new Person1());
+//        _methodRef.constructorRef(Person1::new);
+//        // 有参
+//        _methodRef.constructorRef2("123",123, (x, y)->new Person1(x,y));
+//        _methodRef.constructorRef2("123",123, Person1::new);
 
 
         _methodRef.methodRef("ref", x-> System.out.println(x));
         _methodRef.methodRef("ref", System.out::println);
 
-        Person p = new Person("zhangsan", 20);
+        Person1 p = new Person1("zhangsan", 20);
         Supplier<String> supplier = () -> p.getName();
         Supplier<String> supplier1 = p::getName;
         System.out.println(supplier.get());

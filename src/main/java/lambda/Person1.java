@@ -1,38 +1,38 @@
 package lambda;
 
-public class Person {
+public class Person1 {
     private String name;
     private Integer age;
-    private Status status;
 
-    public Person() {
+    public Person1() {
     }
 
-    public Person(String name, Integer age, Status status ) {
+    public Person1(String name, Integer age) {
         this.name = name;
         this.age = age;
-        this.status = status;
     }
 
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Integer getAge() {
         return age;
     }
 
-    public Status getStatus() {
-        return status;
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Person1{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", status='" + status + '\'' +
                 '}';
     }
 }
